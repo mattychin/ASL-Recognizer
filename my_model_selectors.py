@@ -93,7 +93,7 @@ class SelectorBIC(ModelSelector):
                 # = n**2 + (2 * n * features)
                 
                 features = self.X.shape[1]
-                p = n ** 2 + (2 * n * features) 
+                p = n ** 2 + (2 * n * features) - 1
                 bic_score = (- 2 * logl) + (p * np.log(self.X.shape[0]))
                 
                 # The lower the BIC value/score, the better the model
